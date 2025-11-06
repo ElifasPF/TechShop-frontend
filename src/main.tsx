@@ -4,6 +4,8 @@ import './index.css'
 import App from './App.tsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './componentes/login/login.tsx'
+import Cadastrar from './componentes/cadastro/cadastrar.tsx'
+import Carrinho from './componentes/carrinho/carrinho.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -11,6 +13,8 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/cadastrar' element={<Cadastrar />} />
+        <Route path='/carrinho' element={<Carrinho />} />
         <Route path='/error' element={<>Error</>} />
       </Routes>
     </BrowserRouter>
