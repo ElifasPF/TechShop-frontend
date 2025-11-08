@@ -1,10 +1,8 @@
-// src/App.tsx
-import './App.css' // Importa o App.css (com o tema AutoStar)
+import './App.css'
 import api from './api/api'
 import { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 
-// (Seus types ProdutoType e UserPayload - sem mudanças)
 type ProdutoType = {
   _id: string,
   nome: string,
@@ -23,7 +21,6 @@ function App() {
   const [tipoUsuario, setTipoUsuario] = useState<'admin' | 'user' | null>(null)
   const navigate = useNavigate()
 
-  // (Seu useEffect e suas funções - sem mudanças)
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
@@ -102,7 +99,6 @@ function App() {
 
   return (
     <>
-      {/* 1. HEADER (Cabeçalho Preto do AutoStar) */}
       <header className='header'>
         <div className='header-content'>
           <h1>TechShop</h1>
@@ -113,10 +109,8 @@ function App() {
         </div>
       </header>
 
-      {/* 2. CONTAINER PRINCIPAL (Layout do AutoStar) */}
       <main className='container'>
 
-        {/* 3. FORMULÁRIO DE ADMIN (Layout do AutoStar) */}
         {tipoUsuario === 'admin' && (
           <section className='container-cadastro'>
             <h2>Cadastrar Novo Produto</h2>
@@ -131,7 +125,6 @@ function App() {
           </section>
         )}
 
-        {/* 4. LISTA DE PRODUTOS (Layout dos Cards do AutoStar) */}
         <section className='container-listagem'>
           {produtos.map((produto) => (
             <div key={produto._id} className='product-card'>
