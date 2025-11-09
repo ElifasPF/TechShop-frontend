@@ -1,7 +1,7 @@
-import { useSearchParams } from "react-router-dom"
+import { useSearchParams } from 'react-router-dom'
 function Erro() {
     const [searchParams] = useSearchParams()
-    const mensagem = searchParams.get("mensagem")
+    const mensagem = searchParams.get('mensagem')
     return (
         <>
             <h1>Erro</h1>
