@@ -1,0 +1,48 @@
+.carrinho-container {
+  max-width: 900px;
+  margin: 70px auto;
+  padding: 20px;
+}
+.carrinho-container h1 {
+  color: var(--cor-principal);
+  border-bottom: 2px solid var(--cor-borda);
+  padding-bottom: 10px;
+}
+.carrinho-itens {
+  margin-top: 24px;
+}
+.carrinho-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--cor-borda);
+}
+.item-info h2 {
+  font-size: 1.25rem;
+  margin: 0 0 5px 0;
+}
+.item-info p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+.btn-remover {
+  background-color: var(--cor-perigo);
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+.carrinho-total {
+  margin-top: 24px;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-principal);
+}
+.link-voltar {
+  display: inline-block;
+  margin-top: 24px;
+  color: var(--cor-principal);
+  text-decoration: none;
+  font-weight: 700;
+}
