@@ -6,7 +6,7 @@ import { useNavigate, Link } from 'react-router-dom'
 type ProdutoType = {
   _id: string,
   nome: string,
-  preco: number,
+  preco: Number,
   urlImagem: string,
   descricao: string,
   categoria: string
@@ -116,7 +116,7 @@ function App() {
             <h2>Cadastrar Novo Produto</h2>
             <form onSubmit={handleForm}>
               <input type='text' name='nome' placeholder='Nome do Produto' />
-              <input type='number' name='preco' placeholder='Preço' />
+              <input type='number' name='preco' placeholder='Preço' step='any'/>
               <input type='text' name='urlfoto' placeholder='URL da Imagem' />
               <input type='text' name='categoria' placeholder='Categoria' />
               <input type='text' name='descricao' placeholder='Descrição' />
