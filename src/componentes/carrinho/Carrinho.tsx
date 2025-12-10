@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import api from '../../api/api';
 import { Link, useNavigate } from 'react-router-dom';
-import './carrinho.css'; // Importa o CSS do carrinho
-import '../../App.css'; // Importa o CSS do Header (para o cabeçalho preto)
+import './carrinho.css';
+import '../../App.css';
 
 interface ItemCarrinho {
     produtoId: string;
@@ -112,8 +112,25 @@ function Carrinho() {
                                 </div>
                             ))}
                         </div>
+
                         <div className='carrinho-total'>
                             <h2>Total: R$ {totalDoCarrinho.toFixed(2)}</h2>
+
+                            <Link to="/finalizar-compra" style={{ textDecoration: 'none' }}>
+                                <button style={{
+                                    marginTop: '20px',
+                                    width: '100%',
+                                    backgroundColor: 'green',
+                                    color: 'white',
+                                    fontSize: '1.2rem',
+                                    padding: '12px',
+                                    cursor: 'pointer',
+                                    borderRadius: '5px'
+                                }}>
+                                    Finalizar Compra
+                                </button>
+                            </Link>
+
                         </div>
                     </>
                 )}
